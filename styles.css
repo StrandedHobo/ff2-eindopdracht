@@ -9,7 +9,67 @@ div {
   height: 33%;
 }
 
-div.color {
+div.changeSize {
   width: 50%;
-  transition: width 2s;
+  height: 50%;
+  transition: 2s;
+}
+
+.box {
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    margin-top: -50px;
+    margin-left: -100px;
+}
+
+div.changeColor {
+    background: brown !important;
+    animation: fadein;
+    transition: 2s;
+}
+
+div.dissapear {
+    display: none;
+}
+
+div.quarantaine {
+    margin: 10px;
+}
+
+.yel:hover {
+    transform: scale(2.1);
+    transition: 5s;
+}
+
+div.dance {
+    background: orange !important;
+    position: relative;
+    animation-name: animation;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+}
+
+div.colorCycle {
+    background: orange !important;
+    animation-name: cycle;
+    animation-duration: 999s;
+}
+
+@keyframes cycle {
+    {
+  0%   {background: red !important;}
+  25%  {background: yellow !important;}
+  50%  {background: blue !important;}
+  75%  {background: green !important;}
+  100% {background: red !important;}
+}
+}
+
+@keyframes animation {
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:200px; top:200px;}
+  75%  {left:0px; top:200px;}
+  100% {left:0px; top:0px;}
 }
